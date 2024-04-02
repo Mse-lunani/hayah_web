@@ -1,0 +1,43 @@
+1) Cross-Browser Compatibility: Check which browsers developers have tested for compatibility.
+
+I have checked in (Chorme,Firefox,Safri )
+	
+2) Responsive Design: Examine how font sizes adjust in the responsive version.
+
+Laptop responsive (I have decreased 20% of the fontsizes in laptop screen ).
+
+Tab responsive (I have decreased 40% of the fontsizes in tab screen ).
+
+Mobile responsive (I have decreased 60% of the fontsizes in mobile screen ),
+
+3) Pixel-Perfect Design Implementation: Ensure precise design implementation.
+
+Its pixel perfect.
+
+4) Navigation and Interactivity: Test all interactive elements (buttons, links, forms, dropdowns, etc.) to ensure intended functionality. Verify that navigation menus correctly link to appropriate pages.
+
+All links are working.
+
+5) Content and Typography: Confirm accuracy and proper styling of textual content according to the design. Review font sizes, colors, line heights, and other typography details.
+
+I have stylized the theme according to the design.
+
+Basic Rules of html were followed in the completion.
+
+6) Images and Graphics: Validate correct display and web optimization of all images and graphics. Test image sliders, galleries, and related components.
+
+All the images were optimized and working correctly in sliders, galleries and related components.
+
+7) Forms and User Input: Test forms for validation, error messages, and successful submission. Verify correct alignment and styling of form inputs.
+
+All forms are working fine and showing error messages, and successful submission.
+
+
+8) Link and Page Testing: Thoroughly test internal and external links to ensure accurate destinations. Confirm proper implementation and accessibility of all pages.
+
+All the links are working.
+
+
+9) E-commerce Functionality (if applicable): Evaluate product listings, shopping cart functionality, and the checkout process. Verify integration of payment gateways and order processing."
+
+Its doesn't belong to me.
