@@ -1,0 +1,263 @@
+[
+  {
+    "topic": "Breastfeeding Fun Quiz",
+    "questions": [
+      {
+        "question": "What is colostrum?",
+        "choices": [
+          "a) A type of formula milk",
+          "b) The first milk produced by the breasts after giving birth",
+          "c) A common breastfeeding position",
+          "d) A type of breast pump"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How long is it recommended to exclusively breastfeed a newborn?",
+        "choices": ["a) 1 month", "b) 3 months", "c) 6 months", "d) 1 year"],
+        "answer": 2
+      },
+      {
+        "question": "What is a common benefit of breastfeeding for both mother and baby?",
+        "choices": [
+          "a) Increased risk of infections",
+          "b) Decreased bonding between mother and baby",
+          "c) Reduced risk of certain diseases for both",
+          "d) Higher chance of postpartum depression"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What hormone is responsible for milk production?",
+        "choices": [
+          "a) Estrogen",
+          "b) Progesterone",
+          "c) Prolactin",
+          "d) Testosterone"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which of the following foods should a breastfeeding mother avoid to prevent discomfort for the baby?",
+        "choices": [
+          "a) Garlic",
+          "b) Broccoli",
+          "c) Chocolate",
+          "d) All of the above"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What is one way to increase milk supply?",
+        "choices": [
+          "a) Drinking sage tea",
+          "b) Decreasing fluid intake",
+          "c) Skipping breastfeeding sessions",
+          "d) Applying ice packs to the breasts"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is the term for when a baby suckles but does not receive much milk?",
+        "choices": [
+          "a) Cluster feeding",
+          "b) Engorgement",
+          "c) Let-down reflex",
+          "d) Comfort nursing"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What is the recommended position for breastfeeding to ensure proper latch?",
+        "choices": [
+          "a) Sitting straight up",
+          "b) Lying on your back",
+          "c) Leaning back comfortably",
+          "d) Standing up"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "How often should a newborn typically breastfeed in a 24-hour period?",
+        "choices": [
+          "a) Every 6-8 hours",
+          "b) Once a day",
+          "c) On demand, typically 8-12 times",
+          "d) Every 12 hours"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is one way to tell if a baby is getting enough milk during breastfeeding?",
+        "choices": [
+          "a) Baby's weight loss",
+          "b) Counting the number of wet diapers per day",
+          "c) How loudly the baby cries",
+          "d) Baby's preference for one breast over the other"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+
+  {
+    "topic": "Birth Preparation Fun Quiz",
+    "questions": [
+      {
+        "question": "What is a birth plan?",
+        "choices": [
+          "a) A plan detailing every aspect of the birth process",
+          "b) A flexible guide outlining preferences for labor and delivery",
+          "c) A legally binding document for healthcare providers",
+          "d) A plan created solely by healthcare providers"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which of the following is a common technique for managing pain during labor?",
+        "choices": [
+          "a) Acupuncture",
+          "b) Meditation",
+          "c) Hypnosis",
+          "d) All of the above"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What is the role of a doula during childbirth?",
+        "choices": [
+          "a) Performing medical procedures during labor",
+          "b) Providing emotional and physical support to the mother",
+          "c) Administering pain medication",
+          "d) Monitoring fetal heart rate"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the term for the process of the baby moving down the birth canal?",
+        "choices": [
+          "a) Transition",
+          "b) Crowning",
+          "c) Engagement",
+          "d) Effacement"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which position can help facilitate labor progress and reduce back pain?",
+        "choices": [
+          "a) Lying flat on the back",
+          "b) Standing upright",
+          "c) Sitting in a reclined position",
+          "d) Kneeling on all fours"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What is the purpose of perineal massage during pregnancy?",
+        "choices": [
+          "a) To reduce swelling in the ankles",
+          "b) To prevent stretch marks",
+          "c) To prepare the perineum for childbirth and reduce the risk of tearing",
+          "d) To induce labor"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the term for the thinning and opening of the cervix during labor?",
+        "choices": [
+          "a) Dilation",
+          "b) Contractions",
+          "c) Braxton Hicks",
+          "d) Rupture of membranes"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which of the following is a common sign that labor is approaching?",
+        "choices": [
+          "a) Decreased fetal movement",
+          "b) Increased appetite",
+          "c) Lightning crotch",
+          "d) Decreased frequency of Braxton Hicks contractions"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the medical procedure used to induce labor artificially?",
+        "choices": [
+          "a) C-section",
+          "b) Epidural",
+          "c) Pitocin",
+          "d) Vacuum extraction"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the recommended way to prepare for breastfeeding after birth?",
+        "choices": [
+          "a) Avoiding all dairy products during pregnancy",
+          "b) Reading books and attending classes on breastfeeding",
+          "c) Stocking up on formula just in case",
+          "d) Not preparing anything, as breastfeeding comes naturally to all mothers"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "topic": "Pregnancy Myth Busting Quiz",
+    "questions": [
+      {
+        "question": "Myth: Eating spicy food can induce labor.",
+        "choices": ["a) Yes", "b) No"],
+        "answer": 1
+      },
+      {
+        "question": "Myth: Pregnant women should avoid exercise to prevent harm to the baby.",
+        "choices": ["a) Yes", "b) No"],
+        "answer": 1
+      },
+      {
+        "question": "Myth: Heartburn during pregnancy means the baby will have a lot of hair.",
+        "choices": ["a) Yes", "b) No"],
+        "answer": 0
+      },
+      {
+        "question": "You shouldn't get vaccinated during pregnancy.",
+        "choices": ["a) Yes", "b) No"],
+        "answer": 1
+      },
+      {
+        "question": "Drinking coffee during pregnancy can cause birth defects.",
+        "choices": ["a) Yes", "b) No"],
+        "answer": 0
+      },
+      {
+        "question": "You should eat for two when you're pregnant.",
+        "choices": ["a) Yes", "b) No"],
+        "answer": 1
+      },
+      {
+        "question": "Pregnant women should avoid all seafood.",
+        "choices": ["a) Yes", "b) No"],
+        "answer": 1
+      },
+      {
+        "question": "It's okay to smoke cigarettes occasionally during pregnancy.",
+        "choices": ["a) Yes", "b) No"],
+        "answer": 1
+      },
+      {
+        "question": "You can't dye your hair during pregnancy.",
+        "choices": ["a) Yes", "b) No"],
+        "answer": 0
+      },
+      {
+        "question": "You shouldn't sleep on your back while pregnant.",
+        "choices": ["a) Yes", "b) No"],
+        "answer": 0
+      }
+    ]
+  }
+]
