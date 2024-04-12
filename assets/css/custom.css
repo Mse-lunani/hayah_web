@@ -3298,7 +3298,7 @@ h5 {
 /* about us page styling end */
 /* service page styling start */
 .service-banner {
-    background: url(../images/service-banner-img.jpg) no-repeat center;
+    background: url(../images/know.png) no-repeat center;
     background-size: cover;
     height: 640px;
 }
@@ -3459,7 +3459,7 @@ h5 {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    background: var(--accent);
+    background: var(--button-color);
     color: var(--primary-color);
     transition: .3s ease-in-out;
 }
@@ -3469,7 +3469,7 @@ h5 {
 }
 
 .contact-main-sec .form-box button:hover {
-    background: var(--button-color);
+    background: var(--accent);
 }
 
 .contact-txt h4 {
