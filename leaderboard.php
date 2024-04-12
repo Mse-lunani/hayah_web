@@ -78,8 +78,8 @@
 <section class="service-banner sub-banner-section w-100 float-left d-flex align-items-center">
     <div class="container">
         <div class="sub-banner-inner-con text-center">
-            <h1 data-aos="fade-up" data-aos-duration="700">Quiz</h1>
-            <p data-aos="fade-up" data-aos-duration="700">Test your Knowledge</p>
+            <h1 data-aos="fade-up" data-aos-duration="700">LeaderBoard</h1>
+            <p data-aos="fade-up" data-aos-duration="700">See how you faired</p>
             <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-duration="700">
                 <ol class="breadcrumb d-inline-block mb-0">
                     <li class="breadcrumb-item d-inline-block"><a href="index.html">Home</a></li>
