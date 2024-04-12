@@ -51,6 +51,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link p-0" href="index.html">Home</a>
+
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link p-0" href="leaderboard.php">Leaderboard</a>
                     </li>
                 </ul>
