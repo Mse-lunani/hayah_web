@@ -174,8 +174,7 @@ $quiz = json_encode($questions);
     });
     $(".finish").click(function(){
         if(answered){
-            $("loaddata").empty();
-            loadtopics();
+            window.location.reload();
             return;
         }
         console.log(ans);
@@ -211,8 +210,7 @@ $quiz = json_encode($questions);
         });
 
 
-        $("loaddata").empty();
-        loadtopics();
+        window.location.reload();
     });
 
 </script>
