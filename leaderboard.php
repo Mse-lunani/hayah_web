@@ -51,7 +51,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link p-0" href="index.html">Home</a>
-                        <a class="nav-link p-0" href="leaderboard.php">Leaderboard</a>
+                        <a class="nav-link p-0" href="quiz.php">Quiz</a>
                     </li>
                 </ul>
                 <div class="header-contact d-flex align-items-center">
@@ -89,7 +89,22 @@
 <!-- BANNER SECTION END -->
 <!-- CART SECTION -->
 <div class="nft-section contact-main-sec bg-white checkout-section cart-section w-100 float-left padding-top" id="cart_section">
-    <div class="container" id = "loaddata">
+    <div class="container">
+
+        <div class="generic-title text-center">
+            <img style = "width:100px" src="assets/images/gifs/podium.gif" alt="line">
+            <span class="small-text">How everyone has faired</span>
+            <h2>Leaderboard</h2>
+        </div>
+        <div id="spin" style="display: none" class="justify-content-center">
+            <div  class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <div id="leadboard">
+
+        </div>
+
 
     </div>
 </div>
@@ -119,14 +134,14 @@
                     <div class="social-links">
                         <ul class="list-unstyled mb-0 d-flex ">
                             <li class="d-flex justify-content-center align-items-center"><a
-                                        href="https://www.facebook.com/login/"><i class="fab fa-facebook-f"></i></a>
+                                    href="https://www.facebook.com/login/"><i class="fab fa-facebook-f"></i></a>
                             </li>
                             <li class="d-flex justify-content-center align-items-center"><a
-                                        href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><i
-                                            class="fab fa-twitter"></i></a></li>
+                                    href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><i
+                                        class="fab fa-twitter"></i></a></li>
                             <li class="d-flex justify-content-center align-items-center"><a
-                                        href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fonetap%2F%3Fnext%3D%252F%26__coig_login%3D1"><i
-                                            class="fab fa-instagram"></i></a>
+                                    href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fonetap%2F%3Fnext%3D%252F%26__coig_login%3D1"><i
+                                        class="fab fa-instagram"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -136,11 +151,11 @@
                 <h4>About Us</h4>
                 <ul class="mb-0 list-unstyled">
                     <li class="position-relative"><a href="https://hayahafrica.com/privacy.html"><i
-                                    class="fas fa-angle-right"></i>Privacy policy</a></li>
+                                class="fas fa-angle-right"></i>Privacy policy</a></li>
                     <li class="position-relative"><a href="#about"><i class="fas fa-angle-right"></i>About
                             us</a></li>
                     <li class="position-relative"><a href="#team"><i
-                                    class="fas fa-angle-right"></i>Team</a></li>
+                                class="fas fa-angle-right"></i>Team</a></li>
 
                     </li>
                 </ul>
@@ -163,7 +178,7 @@
                 <ul class="mb-0 list-unstyled">
 
                     <li class="position-relative"><a href="mailto:info@hayahbloom.org"><i
-                                    class="fas fa-envelope"></i>info@hayahbloom.org</a></li>
+                                class="fas fa-envelope"></i>info@hayahbloom.org</a></li>
                     <li class="position-relative mb-0"><i class="fas fa-map-marker-alt"></i>Nairobi, Kenya</li>
                 </ul>
             </div>
@@ -187,106 +202,40 @@
 <script>
     AOS.init();
 </script>
-<script>
-    $(window).on('load', function(){
+    <script>
+        $(window).on('load', function(){
         // Preloader
         $('.loader').fadeOut();
         $('.loader-mask').delay(350).fadeOut('slow');
     });
 
-    function loading (){
+        function loading (){
         document.getElementById("spin").style.display = "flex";
         document.getElementById("submit").style.display = "none";
     }
-    function loadingComplete (){
+        function loadingComplete (){
         document.getElementById("spin").style.display = "none";
         document.getElementById("submit").style.display = "block";
     }
-
-    $(document).ready(async  function(){
-        let name = await localStorage.getItem("name");
-        if(name === null) {
-            loadname();
-        }else{
-            loadtopics();
+        function loadname(){
+            loading();
+            $("#leadboard").load("https://hayahafrica.com/admin/apis/lead.php",
+                function(response, status, xhr) {
+                    if (status == "success") {
+                        // Code to execute after the load is complete
+                        console.log("Load completed successfully");
+                      loadingComplete();
+                    } else {
+                        // Code to handle errors
+                        console.log("Error loading data");
+                        loadingComplete();
+                    }
+                });
         }
 
-    });
-
-    function loadtopics(){
-        $("#loaddata").text("");
-        $("#loaddata").load("topics.php",
-            function(response, status, xhr) {
-                if (status == "success") {
-                    // Code to execute after the load is complete
-                    console.log("Load completed successfully");
-                } else {
-                    // Code to handle errors
-                    console.log("Error loading data");
-                }
-            });
-    }
-    function loadname(){
-        $("#loaddata").text("");
-        $("#loaddata").load("name.php",
-            function(response, status, xhr) {
-                if (status == "success") {
-                    // Code to execute after the load is complete
-                    console.log("Load completed successfully");
-                    $("#myform").submit(e=>{
-                        loading();
-                        e.preventDefault();
-                        let name = $("#name").val();
-                        if(name !==""){
-                            const data = new FormData();
-                            data.append("name",name);
-                            $.ajax({
-                                url:"https://hayahafrica.com/admin/apis/save_name.php",
-                                data: data,
-                                method: 'POST',
-                                type: 'POST',
-                                dataType: 'json',
-                                processData: false,
-                                contentType: false,
-                                success:async (resp)=>{
-                                    if(resp.status === 1){
-                                        let dt = JSON.stringify(resp.data);
-                                        await localStorage.setItem("name",dt);
-                                        console.log(dt);
-                                        loadingComplete();
-                                        loadtopics();
-                                    }else{
-                                        alert("user is already taken");
-                                        loadingComplete();
-                                    }
-                                },
-                                finally:()=>{
-                                    loadingComplete();
-                                }
-                            });
-                        }
-                    })
-                } else {
-                    // Code to handle errors
-                    console.log("Error loading data");
-                }
-            });
-    }
-    function loadquestions(){
-        $("#loaddata").text("");
-        let topic = localStorage.getItem('topic');
-        $("#loaddata").load("questions.php?topic="+topic,
-            function(response, status, xhr) {
-                if (status == "success") {
-                    // Code to execute after the load is complete
-                    console.log("Load completed successfully");
-                } else {
-                    // Code to handle errors
-                    console.log("Error loading data");
-                }
-            });
-    }
-
+        $(document).ready(function (){
+            loadname();
+        });
 </script>
 </body>
 </html>
