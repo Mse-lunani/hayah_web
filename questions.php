@@ -194,7 +194,7 @@ $quiz = json_encode($questions);
             data.append("pid", user.id);
             data.append("qid", i);
             data.append("tid", "<?= $id ?>");
-            data.append("aid", element);
+            data.append("aid", value);
             data.append("point", point);
             console.log("DATA",data);
             method = "POST";
