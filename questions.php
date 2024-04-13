@@ -185,9 +185,9 @@ $quiz = json_encode($questions);
         answers.push(answer);
         localStorage.setItem('answers', JSON.stringify(answers));
 
-        $.each(ans, async function(index, value) {
+        $.each(ans, async function(i, value) {
             point = 0;
-            if (Quiz[i].answer === element) {
+            if (Quiz[i].answer === value) {
                 point = 1;
             }
             data = new FormData();
@@ -196,6 +196,7 @@ $quiz = json_encode($questions);
             data.append("tid", "<?= $id ?>");
             data.append("aid", element);
             data.append("point", point);
+            console.log("DATA",data);
             method = "POST";
             url = "https://hayahafrica.com/admin/apis/save_answers.php";
             await fetch(url, {
