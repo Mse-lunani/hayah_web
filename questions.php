@@ -84,6 +84,51 @@ $quiz = json_encode($questions);
 <script>
     let user = localStorage.getItem('name');
     user = JSON.parse(user)[0];
+    function saveAnswer(data) {
+        return new Promise(function(resolve, reject) {
+            $.ajax({
+                url: "https://hayahafrica.com/admin/apis/save_answers.php",
+                data: data,
+                method: 'POST',
+                type: 'POST',
+                dataType: 'json',
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    resolve(response);
+                },
+                error: function(xhr, status, error) {
+                    reject(error);
+                }
+            });
+        });
+    }
+    function saveAnswers(ans, Quiz, user) {
+        return new Promise(async function(resolve, reject) {
+            let point = 0, value;
+
+            try {
+                for (let i = 0; i < ans.length; i++) {
+                    value = ans[i];
+                    point = Quiz[i].answer === value ? 1 : 0;
+
+                    let data = new FormData();
+                    data.append("pid", user.id);
+                    data.append("qid", i);
+                    data.append("tid", "<?= $id ?>");
+                    data.append("aid", value);
+                    data.append("point", point);
+                    console.log("DATA", data);
+
+                    let response = await saveAnswer(data);
+                    console.log(response);
+                }
+                resolve("All answers saved successfully.");
+            } catch (error) {
+                reject(error);
+            }
+        });
+    }
     $(".parent").hide();
     $(".parent").first().show();
     $(".finish").hide();
@@ -172,7 +217,7 @@ $quiz = json_encode($questions);
 
         }
     });
-    $(".finish").click(function(){
+    $(".finish").click(async function(){
         if(answered){
             window.location.reload();
             return;
@@ -185,33 +230,14 @@ $quiz = json_encode($questions);
         answers.push(answer);
         localStorage.setItem('answers', JSON.stringify(answers));
 
-        $.each(ans, async function(i, value) {
-            point = 0;
-            if (Quiz[i].answer === value) {
-                point = 1;
-            }
-            data = new FormData();
-            data.append("pid", user.id);
-            data.append("qid", i);
-            data.append("tid", "<?= $id ?>");
-            data.append("aid", value);
-            data.append("point", point);
-            console.log("DATA",data);
-            method = "POST";
-            url = "https://hayahafrica.com/admin/apis/save_answers.php";
-            await fetch(url, {
-                method: method,
-                body: data
-            }).then(response => response.json()).then(data => {
-                console.log(data);
-            }).catch(error => {
-                console.error(error);
-            });
-
-        });
-
-
+        try {
+            let response = await saveAnswers(ans, Quiz, user);
+            console.log(response);
+        } catch (error) {
+            console.error(error);
+        }
         window.location.reload();
     });
+
 
 </script>
