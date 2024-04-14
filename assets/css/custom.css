@@ -1006,7 +1006,7 @@ h5 {
 /* project section style end */
 /* counter section style start */
 .counter-section {
-    background: url(../images/counter-sec-bg-img.jpg) no-repeat center;
+    background: url(../images/amother.png) no-repeat center;
     background-size: cover;
     height: 428px;
 }
@@ -1218,6 +1218,24 @@ h5 {
 .member-detail-box ul {
     margin-bottom: 10px;
 }
+
+.my-item{
+    width: 40%;
+}
+.myflex{
+    display: flex;
+}
+@media screen and (max-width: 768px) {
+    .my-item{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .myflex{
+        display: block;
+
+    }
+}
+
 
 /* team section style end */
 /* testimonial style start */
@@ -1504,7 +1522,7 @@ h5 {
     color: var(--primary-color);
 }
 
-.subscribe-con button {
+.subscribe-con a {
     font-size: 16px;
     font-weight: 700;
     padding: 19px 36px 18px 37px;
@@ -1512,19 +1530,21 @@ h5 {
     border: none;
     cursor: pointer;
     transition: .3s ease-in-out;
+    color: var(--button-color);
+    text-decoration: none;
     background: var(--primary-color);
 }
-.subscribe-con button[type=submit]{
+.subscribe-con a{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
-.subscribe-con button:hover {
+.subscribe-con a:hover {
     color: var(--primary-color);
     background: var(--button-color);
 }
 
-.subscribe-con button:focus,
+.subscribe-con a:focus,
 .subscribe-con input:focus {
     outline: none;
 }
@@ -2516,6 +2536,7 @@ h5 {
 
 .index3-banner-section .banner-txt-section h1 {
     color: var(--secondary-color);
+    font-size: 42px;
 }
 
 .index3-banner-section .banner-txt-section p {
